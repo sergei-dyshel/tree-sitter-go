@@ -21,6 +21,7 @@
   },
   "scripts": {
     "build": "tree-sitter generate && node-gyp build",
+    "install": "node-gyp clean && node-gyp configure && make -d -C build",
     "test": "tree-sitter test && script/parse-examples",
     "test-windows": "tree-sitter test"
   },
